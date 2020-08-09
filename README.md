@@ -4,7 +4,6 @@ This example shows hot to import existing AWS resources into TF.
 To follow this example you need to have a couple of resources in AWS available. You can use this repo to create some: [tf-aws-simple](https://github.com/hc-showcase/tf-aws-simple). 
 
 The following environment variables are set:
-
 AWS_ACCESS_KEY_ID='abc123'
 AWS_SECRET_ACCESS_KEY 'abc123'
 AWS_DEFAULT_REGION 'eu-central-1'
