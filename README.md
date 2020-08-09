@@ -8,8 +8,6 @@ The following environment variables are set:
 * AWS_SECRET_ACCESS_KEY 'abc123'
 * AWS_DEFAULT_REGION 'eu-central-1'
 
-Clone this repository to your local machine.
-
 1. Clone this repository to your machine.
 ```
 mkaesz@arch ~/workspace> git clone https://github.com/hc-showcase/tf-aws-import
