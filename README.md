@@ -8,6 +8,7 @@ The following environment variables are set:
 AWS_ACCESS_KEY_ID='abc123'
 AWS_SECRET_ACCESS_KEY 'abc123'
 AWS_DEFAULT_REGION 'eu-central-1'
+
 Clone this repository to your local machine.
 
 1. Clone this repository to your machine.
@@ -93,6 +94,7 @@ resource "aws_vpc" "example" {
 ```
 
 4. Execute Terraform validate
+
 The output will show which configuration is mandatory. Ignore for now.
 
 ```
@@ -123,6 +125,7 @@ The argument "cidr_block" is required, but no definition was found.
 ```
 
 5. Import existing AWS resources into Terraform.
+
 To import a resource you need to have the ID of the resource. In the case of AWS you can go to the AWS Console or use the AWS CLI. In my case, the IDs that I collected are the following:
 * EC2 instance: i-0b7402f4c0ed0f470
 * VPC: vpc-0a7fb68129373de87
@@ -161,6 +164,7 @@ Usage: terraform import [options] ADDR ID
 ```
 
 The ADDR specifies the address to import the resource to. In hour case these are:
+
 * EC2 instance: module.mod1.aws_instance.example
 * VPC: module.mod2.aws_vpc.example
 * S3 bucket: aws_s3_bucket.example
@@ -214,6 +218,7 @@ module.mod2.aws_vpc.example
 ```
 
 7. Complete the Terraform configuration:
+
 Terraform validate still throws errors about missing configuration items:
 
 ```
@@ -382,6 +387,7 @@ Success! The configuration is valid.
 ```
 
 8. Execute terraform plan
+
 When we execute Terraform plan, we see that Terraform recognizes that a Tag is not specified in the local Terraform config as well as two field weren't mandatory, but the creator of the original resource specified them. This is considered a change:
 ```
 mkaesz@arch ~/w/tf-aws-import (master)> terraform plan
